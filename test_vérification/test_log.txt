@@ -1,0 +1,133 @@
+Test d'intégrité des données commencé.
+Test d'intégrité des données terminé.
+Test des propriétés ACID commencé.
+Test des propriétés ACID terminé.
+Test de performance commencé.
+Temps de récupération : 0.00043392181396484 secondes.
+Test d'évolutivité commencé.
+Test d'intégrité des données commencé.
+Test d'intégrité des données terminé.
+Test des propriétés ACID commencé.
+Test des propriétés ACID terminé.
+Test de performance commencé.
+Temps de récupération : 0.00079894065856934 secondes.
+Test d'évolutivité commencé.
+Test d'évolutivité terminé.
+Test de sécurité commencé.
+Test de sécurité terminé.
+Validation des règles métier commencée.
+Validation des règles métier terminée.
+Test CRUD commencé.
+Test CRUD terminé.
+Test de validité des données commencé.
+Test de validité des données terminé.
+Vérification de la synchronisation commencée.
+Vérification de la synchronisation terminée.
+Test d'intégrité des données commencé.
+Test d'intégrité des données terminé.
+Test des propriétés ACID commencé.
+Test des propriétés ACID terminé.
+Test de performance commencé.
+Temps de récupération : 0.00078988075256348 secondes.
+Test d'évolutivité commencé.
+Test d'évolutivité terminé.
+Test de sécurité commencé.
+Test de sécurité terminé.
+Validation des règles métier commencée.
+Validation des règles métier terminée.
+Test CRUD commencé.
+Test CRUD terminé.
+Test de validité des données commencé.
+Test de validité des données terminé.
+Vérification de la synchronisation commencée.
+Vérification de la synchronisation terminée.
+Test d'intégrité des données commencé.
+Test d'intégrité des données terminé.
+Test des propriétés ACID commencé.
+Test des propriétés ACID terminé.
+Test de performance commencé.
+Temps de récupération : 0.00058984756469727 secondes.
+Test d'évolutivité commencé.
+Test d'évolutivité terminé.
+Test de sécurité commencé.
+Test de sécurité terminé.
+Validation des règles métier commencée.
+Validation des règles métier terminée.
+Test CRUD commencé.
+Test CRUD terminé.
+Test de validité des données commencé.
+Test de validité des données terminé.
+Vérification de la synchronisation commencée.
+Vérification de la synchronisation terminée.
+Test d'intégrité des données commencé.
+Test d'intégrité des données terminé.
+Test des propriétés ACID commencé.
+Test des propriétés ACID terminé.
+Test de performance commencé.
+Temps de récupération : 0.00082182884216309 secondes.
+Test d'évolutivité commencé.
+Test d'évolutivité terminé.
+Test de sécurité commencé.
+Test de sécurité terminé.
+Validation des règles métier commencée.
+Validation des règles métier terminée.
+Test CRUD commencé.
+Test CRUD terminé.
+Test de validité des données commencé.
+Test de validité des données terminé.
+Vérification de la synchronisation commencée.
+Vérification de la synchronisation terminée.
+Test d'intégrité des données commencé.
+Test d'intégrité des données terminé.
+Test des propriétés ACID commencé.
+Test des propriétés ACID terminé.
+Test de performance commencé.
+Temps de récupération : 0.00064802169799805 secondes.
+Test d'évolutivité commencé.
+Test d'évolutivité terminé.
+Test de sécurité commencé.
+Test de sécurité terminé.
+Validation des règles métier commencée.
+Validation des règles métier terminée.
+Test CRUD commencé.
+Test CRUD terminé.
+Test de validité des données commencé.
+Test de validité des données terminé.
+Vérification de la synchronisation commencée.
+Vérification de la synchronisation terminée.
+Test d'intégrité des données commencé.
+Test d'intégrité des données terminé.
+Test des propriétés ACID commencé.
+Test des propriétés ACID terminé.
+Test de performance commencé.
+Temps de récupération : 0.00090789794921875 secondes.
+Test d'évolutivité commencé.
+Test d'évolutivité terminé.
+Test de sécurité commencé.
+Test de sécurité terminé.
+Validation des règles métier commencée.
+Validation des règles métier terminée.
+Test CRUD commencé.
+Test CRUD terminé.
+Test de validité des données commencé.
+Test de validité des données terminé.
+Vérification de la synchronisation commencée.
+Vérification de la synchronisation terminée.
+Test d'intégrité des données commencé.
+Test d'intégrité des données terminé.
+Test des propriétés ACID commencé.
+Test des propriétés ACID terminé.
+Test de performance commencé.
+Temps de récupération : 0.00050592422485352 secondes.
+Test d'évolutivité commencé.
+Test d'évolutivité terminé.
+Test de sécurité commencé.
+Test de sécurité terminé.
+Validation des règles métier commencée.
+Validation des règles métier terminée.
+Test CRUD commencé.
+Test CRUD terminé.
+Test de validité des données commencé.
+Test de validité des données terminé.
+Vérification de la synchronisation commencée.
+Vérification de la synchronisation terminée.
