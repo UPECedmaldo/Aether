@@ -1,0 +1,328 @@
+/* Variables globales */
+:root {
+    --rad: 0.7rem;
+    --dur: 0.3s;
+    --color-dark: #2f2f2f;
+    --color-light: #fff;
+    --color-brand: #0044cc;
+    --font-fam: 'Montserrat', sans-serif;
+    --height: 5rem;
+    --btn-width: 6rem;
+    --bez: cubic-bezier(0, 0, 0.43, 1.49);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-fam);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+/* Bannière */
+.image-banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(0deg, #0033aa, #00aaff) center;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem; /* Ajoute un espacement entre la navbar et le contenu */
+}
+.banner-image {
+    width: 300px; /* Taille de base */
+    height: auto; /* Garde les proportions */
+    object-fit: contain;
+    margin: 0 auto; /* Centrage horizontal */
+    display: block;
+}
+
+/* Conteneur du bouton */
+.button-container {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement si nécessaire */
+    width: 100%; /* S'assure que le conteneur prend toute la largeur */
+    margin: 20px 0; /* Espacement autour du conteneur */
+}
+
+/* Bouton Explorer */
+.explore-button {
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background-color: var(--color-brand);
+    border: 2px solid transparent;
+    border-radius: 50px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Effet au survol */
+.explore-button:hover {
+    background-color: white;
+    color: var(--color-brand);
+    border: 2px solid var(--color-brand);
+    transform: scale(1.05);
+}
+
+
+/* Texte centré */
+.text-container {
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    margin-top: 2rem; /* Espace supplémentaire sous le haut du site */
+}
+
+
+.text-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.text-container p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* Carte */
+#map {
+    width: 90%;
+    max-width: 1200px;
+    height: 400px;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Barre de recherche */
+.search-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+}
+
+.search-bar input[type="text"] {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1rem;
+    border: 2px solid #0044cc;
+    border-radius: 25px;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input[type="text"]:focus {
+    border-color: #003399;
+    box-shadow: 0 0 5px rgba(0, 68, 204, 0.5);
+}
+
+/* Liste déroulante des stations */
+.search-bar ul {
+    list-style: none;
+    margin: 5px 0 0 0;
+    padding: 0;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    background: var(--color-light);
+    border: 1px solid #0044cc;
+    border-radius: 15px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: calc(100% + 5px);
+    z-index: 1000;
+}
+
+.search-bar ul li {
+    padding: 10px;
+    font-size: 1rem;
+    color: #2f2f2f;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar ul li:hover {
+    background-color: #0044cc;
+    color: white;
+}
+
+body.menu-open #map {
+    display: none;
+}
+
+body.menu-open .search-bar {
+    display: none;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    .banner-image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .text-container h2 {
+        font-size: 2rem;
+    }
+
+    .text-container p {
+        font-size: 1rem;
+    }
+
+    .explore-button {
+        font-size: 1rem;
+    }
+
+    #map {
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .image-banner {
+        padding: 2rem;
+    }
+
+    .banner-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .text-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .text-container p {
+        font-size: 0.9rem;
+    }
+
+    .explore-button {
+        padding: 10px 30px;
+        font-size: 0.9rem;
+    }
+
+    #map {
+        height: 300px;
+    }
+
+    .search-bar {
+        width: 95%;
+    }
+
+    .search-bar input[type="text"] {
+        font-size: 0.9rem;
+        padding: 10px 14px;
+    }
+
+    .search-bar ul li {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .banner-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .text-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .text-container p {
+        font-size: 0.8rem;
+    }
+
+    .explore-button {
+        padding: 8px 20px;
+        font-size: 0.8rem;
+    }
+
+    #map {
+        height: 250px;
+    }
+}
+
+/* Conteneur du bouton climatique */
+.climate-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0 20px 0;
+}
+
+/* Bouton Carte Climatique */
+.climate-button {
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background-color: #009688; /* Couleur différente pour distinguer */
+    border: 2px solid transparent;
+    border-radius: 50px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Effet au survol pour le bouton climatique */
+.climate-button:hover {
+    background-color: white;
+    color: #009688;
+    border: 2px solid #009688;
+    transform: scale(1.05);
+}
+
+/* Media Queries ajustées */
+@media screen and (max-width: 768px) {
+    .climate-button {
+        padding: 10px 30px;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .climate-button {
+        padding: 8px 20px;
+        font-size: 0.8rem;
+    }
+}

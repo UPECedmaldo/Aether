@@ -1,0 +1,67 @@
+/* Style général */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(270deg, #d4a1ff, #4a90e2);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    display: flex;
+    min-height: 100vh;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Section principale */
+.credits-container {
+    padding: 40px;
+    text-align: center;
+    background-color: white;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.credits-container h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.credits-container p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.credits-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.credits-container ul li {
+    font-size: 18px;
+    color: #555;
+    margin: 10px 0;
+}
+

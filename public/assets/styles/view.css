@@ -1,0 +1,282 @@
+/* Style général */
+html, body, root {
+    height: 100%;
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    z-index: 10;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Hamburger Menu pour Mobile */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #000;
+    transition: all 0.3s ease;
+}
+
+/* Logo */
+.logo-container {
+    z-index: 20;
+    flex: 1; /* Ajout de flex: 1 pour donner un tiers de l'espace */
+}
+
+.logo-container img {
+    width: 80px;
+    height: 50px;
+    object-fit: cover;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center; /* Centre les liens */
+    flex: 2; /* Donne deux tiers de l'espace aux liens */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px;
+    transition: color 0.3s ease-in-out;
+    white-space: nowrap; /* Empêche le retour à la ligne des liens */
+}
+
+.nav-links li a.active,
+.nav-links li a:hover {
+    color: #147aff;
+}
+
+/* User Links */
+.user-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    z-index: 20;
+    flex: 1; /* Ajout de flex: 1 pour donner un tiers de l'espace */
+    justify-content: flex-end; /* Aligne les icônes à droite */
+}
+
+.user-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    background-color: #147aff;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.user-links a:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+
+/* Footer */
+.footer {
+    background-color: #0044cc;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: auto;
+}
+
+.footer h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon {
+    font-size: 24px;
+    color: white;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #ffd700;
+}
+
+/* Alertes */
+.alert {
+    padding: 15px;
+    margin: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+.alert-info {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+.alert-warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}
+
+.alert-error {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+/* Media Queries */
+@media screen and (max-width: 968px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+        padding: 70px 0;
+        flex: none; /* Réinitialise flex en mode mobile */
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .logo-container,
+    .user-links {
+        flex: none; /* Réinitialise flex en mode mobile */
+    }
+
+    /* Modification des user-links pour le responsive */
+    .user-links {
+        display: none;
+    }
+
+    .nav-links.active ~ .user-links,
+    .nav-links.active .user-links {
+        display: flex;
+        position: static;
+        margin-top: 30px;
+        width: auto;
+        justify-content: center;
+    }
+
+    /* Intégration des user-links dans nav-links */
+    .nav-links .user-links {
+        display: flex;
+        margin-top: 30px;
+        position: static;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 12px 15px;
+    }
+
+    .logo-container img {
+        width: 60px;
+        height: 40px;
+    }
+
+    .user-links a {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Correction pour la photo de profil */
+.user-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    background-color: #147aff;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    overflow: hidden; /* Ajout pour contenir l'image */
+}
+
+.profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}

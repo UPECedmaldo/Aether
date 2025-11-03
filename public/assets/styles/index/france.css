@@ -1,0 +1,32 @@
+.franceMap {
+    position: relative;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1; /* Maintenir les proportions */
+    max-width: 800px;
+    margin: 0 auto;
+    z-index: 50;
+}
+
+.franceMapLegend {
+    font-size: 12px;
+    color: #990000;
+    font-weight: bold;
+    z-index: 100;
+    margin-bottom: 30px;
+    background-color: #FFFFFF;
+    position: absolute;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    padding: 4px;
+}
+
+/* Media queries pour ajuster selon la taille d'écran */
+@media screen and (max-width: 768px) {
+    .franceMap {
+        max-width: 100%;
+    }
+
+    .franceMapLegend {
+        font-size: 10px;
+    }
+}

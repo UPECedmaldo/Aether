@@ -1,0 +1,202 @@
+.game-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    padding-top: 100px; /* Ajoute de l'espace en haut pour éviter que le contenu soit caché par la navbar */
+    font-family: Arial, sans-serif;
+}
+
+/* Alternative: vous pouvez aussi ajouter un margin-top à la place ou en complément */
+.content {
+    margin-top: 85px; /* Correspond à la hauteur de la navbar (85px) */
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #0033aa;
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+.stations-comparison {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.station {
+    flex: 1;
+    min-width: 300px;
+    background: linear-gradient(to bottom, #f0f9ff 0%, #cbebff 100%);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 51, 170, 0.15);
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.station:hover {
+    transform: translateY(-5px);
+}
+
+.station-info {
+    margin-bottom: 1rem;
+}
+
+.station-name {
+    font-size: 1.8rem;
+    color: #0033aa;
+    margin-bottom: 0.5rem;
+}
+
+.station-city, .station-region {
+    color: #555;
+    margin: 0.25rem 0;
+}
+
+.temperature {
+    font-size: 3rem;
+    color: #e74c3c;
+    font-weight: bold;
+    margin: 1.5rem 0;
+    transition: opacity 0.5s ease;
+}
+
+.temperature.hidden {
+    opacity: 0;
+}
+
+.versus {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #0033aa;
+    padding: 1rem;
+}
+
+.question {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #ccc;
+}
+
+.question p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn-guess {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#btn-higher {
+    background-color: #2ecc71;
+    color: white;
+}
+
+#btn-higher:hover {
+    background-color: #27ae60;
+    transform: translateY(-3px);
+}
+
+#btn-lower {
+    background-color: #e74c3c;
+    color: white;
+}
+
+#btn-lower:hover {
+    background-color: #c0392b;
+    transform: translateY(-3px);
+}
+
+.btn-guess:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.game-result {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.game-result.hidden {
+    display: none;
+}
+
+.result-content {
+    background-color: white;
+    padding: 3rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 90%;
+}
+
+.result-title {
+    color: #0033aa;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#final-score {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.btn-restart {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background-color: #0033aa;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-restart:hover {
+    background-color: #002280;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .versus {
+        width: 100%;
+        text-align: center;
+    }
+
+    .station {
+        min-width: 250px;
+    }
+}

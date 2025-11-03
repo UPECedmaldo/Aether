@@ -1,0 +1,147 @@
+/* Conteneur principal des météothèques */
+.mtq-container {
+    margin: 20px;
+    font-family: 'Lato', sans-serif;
+    padding-top: 105px; /* Augmenté à 105px pour tenir compte de la navbar (85px) + marge */
+}
+
+/* Le reste du CSS reste identique */
+.mtq-title {
+    color: #0044cc;
+    border-bottom: 2px solid #0044cc;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Ajout d'une media query pour les écrans mobiles */
+@media screen and (max-width: 768px) {
+    .mtq-container {
+        padding-top: 85px; /* Légèrement réduit pour les mobiles */
+        margin: 10px; /* Marges réduites sur mobile */
+    }
+}
+
+/* Le reste du CSS reste inchangé */
+.mtq-btn-creer {
+    background-color: #0044cc;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.mtq-btn-creer:hover {
+    background-color: #003399;
+}
+
+/* Conteneur avec scroll horizontal */
+.mtq-scroll-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px 0;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    gap: 20px;
+    scrollbar-width: thin;
+    scrollbar-color: #0044cc #e0e0e0;
+}
+
+.mtq-scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.mtq-scroll-container::-webkit-scrollbar-track {
+    background: #e0e0e0;
+}
+
+.mtq-scroll-container::-webkit-scrollbar-thumb {
+    background-color: #0044cc;
+    border-radius: 4px;
+}
+
+/* Carte météothèque */
+.mtq-card {
+    flex: 0 0 250px;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: white;
+}
+
+.mtq-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Nom de la météothèque */
+.mtq-card-name {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Date de création */
+.mtq-card-date {
+    font-size: 0.9em;
+    opacity: 0.8;
+    margin-bottom: 15px;
+}
+
+/* Statistiques */
+.mtq-card-stats {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Bouton Consulter/Éditer */
+.mtq-btn-consulter {
+    background-color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.mtq-btn-consulter:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+    .mtq-container {
+        padding-top: 85px; /* Légèrement réduit pour les mobiles */
+        margin: 10px; /* Marges réduites sur mobile */
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .mtq-container {
+        padding-top: 60px; /* Ajustement pour les écrans plus petits */
+    }
+
+    .mtq-scroll-container {
+        padding: 10px 0;
+    }
+
+    .mtq-card {
+        flex: 0 0 200px;
+        padding: 15px;
+    }
+
+    .mtq-title {
+        font-size: 20px;
+    }
+}
