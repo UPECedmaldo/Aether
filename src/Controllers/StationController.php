@@ -19,7 +19,7 @@ use Sae\Utils\MeasureUtil;
 class StationController extends AController {
 
     /**
-     * Constructeur de la classe StationController
+     * Constructeur de la classe StationController qui initialise le contrôleur pour les stations
      */
     public function __construct(){
         parent::__construct("station");
